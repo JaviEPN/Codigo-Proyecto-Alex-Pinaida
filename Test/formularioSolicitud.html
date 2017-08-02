@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solicitud de publicacion</title>
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Ubuntu Mono">
+	<link rel="stylesheet" TYPE="text/css" HREF="css/estilos.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<form id="vue-app">
+	<h1>Formulario de Solicitud</h1>
+	<h3>Proyecto:</h3>
+	
+	<select v-model="selected">
+  	<option v-for="option in options" v-bind:value="option.value">
+    {{ option.text }}
+  	</option>
+	</select>
+	<span>Selected: {{ selected }}</span>
+
+	<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');">
+	<OPTION VALUE="link pagina 1">opcion1</OPTION>
+	<OPTION VALUE="link pagina 2">opcion2</OPTION>
+	<OPTION VALUE="link pagina 3">opcion3</OPTION>
+	<OPTION VALUE="link pagina 4">opcion4</OPTION>
+	</SELECT>
+	<h3>Aplicación:</h3>
+	<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');">
+	<OPTION VALUE="link pagina 1">opcion1</OPTION>
+	<OPTION VALUE="link pagina 2">opcion2</OPTION>
+	<OPTION VALUE="link pagina 3">opcion3</OPTION>
+	<OPTION VALUE="link pagina 4">opcion4</OPTION>
+	</SELECT>
+	<h3>Ambiente:</h3>
+	<SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('prueba');">
+	<OPTION VALUE="link pagina 1">opcion1</OPTION>
+	<OPTION VALUE="link pagina 2">opcion2</OPTION>
+	<OPTION VALUE="link pagina 3">opcion3</OPTION>
+	<OPTION VALUE="link pagina 4">opcion4</OPTION>
+	</SELECT>
+	<h3>Versión:</h3>
+	<input type="text" max-length="20" placeholder="Ingrese la versión"/>
+	<h3>Fecha de publicación:</h3>
+	<input type="date" name="fecha">
+	<h3>{{ archivo }}</h3>
+	<input type="file" name="uploadedfile"  />
+	<button type="button">Aceptar</button>
+	<button type="button">Cancelar</button>
+</form>
+  <script src="app.js"></script>
+</body>
+</html>
